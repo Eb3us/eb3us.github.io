@@ -89,6 +89,13 @@ body {
 	margin: 0;
 	height: 8vh;
 }
+.sticky .navlinks:hover a {
+	color: #777;
+}
+.sticky .navlinks:hover {
+	border-left: 1px solid #222;
+	border-right: 1px solid #222;
+}
 .sticky #logo {
 	width: 40px;
 	height: 40px;
