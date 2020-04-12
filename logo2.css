@@ -1,0 +1,207 @@
+
+#logo {
+  width: 100px;
+  height: 100px;
+  color: #a00;
+  background-color: currentColor;
+  border-radius: 50%;
+  position: absolute;
+  border:5px solid black;
+  overflow: hidden;
+  animation: color 0.5s ease-in-out 3.3s;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px rgba(200,200,240,0.3);
+}
+#logo:hover {
+  color:#c00;
+  box-shadow: 0px 0px 6px rgba(200,200,240,0.5)
+}
+
+#logo::before {
+content: "";
+  border-color: transparent transparent white transparent;
+      border-style: solid;
+      border-width: 80px 55px 27px 31px;
+      height: 0px;
+      width: 0px;
+      left: -60px;
+      top: -80px;
+      position: absolute;
+      transform: rotate(250deg);
+      z-index: 2;
+      animation: movea 1.5s 1.7s, apear 1.2s 1s;
+      animation-timing-function:cubic-bezier(1, 0.9, 2.450, 0.2);
+      animation-fill-mode: forwards;
+      transform-origin: 95% 95%;
+      opacity: 0;
+}
+#logo::after {
+  content: "";
+  position: absolute;
+  border-radius: 0 100% 50% 30%;
+  background-color: white;
+  width: 30px;
+  height: 85px;
+  top :3px;
+  left: 48px;
+  opacity: 0;
+  transform: rotate(-20deg);
+  z-index: 2;
+  animation: bin 0.5s ease-in 1.2s, apear 1s ease-out 1.2s forwards;
+
+
+  }
+#logo2 {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 50%;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+
+}
+#logo2::before {
+content: "";
+  border-color: transparent transparent black transparent;
+      border-style: solid;
+      border-width: 80px 70px 34px 32px;
+      height: 0px;
+      width: 0px;
+      left: -70px;
+      top: -65px;
+      position: absolute;
+      transform: rotate(250deg);
+      animation: movea 1.5s 1.7s, apear 1.2s 1s;
+      animation-timing-function:cubic-bezier(0, 1, 2.450, 232);
+      animation-fill-mode: forwards;
+      transform-origin: 85% 85%;
+opacity: 0;
+}
+#logo2::after {
+  content: "";
+  position: absolute;
+  border-radius: 0 80% 35% 20%;
+  background-color: black;
+  width: 42px;
+  height: 92px;
+  top :4px;
+  left: 48px;
+  opacity: 0;
+  transform: rotate(-20deg);
+  animation: bin 0.5s ease-in 1.2s, apear 1s ease-out 1.2s forwards;
+
+  }
+#logo-line {
+  width: 0%;
+  background-color: black;
+  height: 5px;
+  transform: rotate(-20deg);
+  z-index: 3;
+  position: absolute;
+  top: 42px;
+  left: -5px;
+  animation-name: moveline;
+  animation-duration: 0.5s;
+  animation-play-state:running;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-timing-function:cubic-bezier(0, 1, 2.450, 98);
+
+}
+#logo-line::after {
+  content: "";
+  border-color: transparent black transparent transparent;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 14px 14px 14px 14px;
+  position: absolute;
+  bottom:-11px;
+  left: 55px;
+  opacity: 0;
+  animation: apear 1s ease-out 3.1s;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes movea {
+  0% {
+    transform: rotate(250deg);
+  }
+  25% {
+    transform: rotate(255deg)
+  }
+  50% {
+    transform: rotate(250deg);
+  }
+  75% {
+    transform: rotate(255deg);
+  }
+
+}
+@keyframes moveline {
+      0% {
+      width: 0%;
+      transform: rotate(-10deg);
+    }
+    100% {
+      width: 110%;
+      transform: rotate(-20deg);
+    }
+}
+@keyframes bin {
+  0% {
+    left: 200px;
+
+  }
+
+    100% {
+    left: 48px;
+
+  }
+}
+@keyframes apear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes color {
+  0% {
+    color: #b00;
+  }
+  10% {
+    color: #a00;
+  }
+  20% {
+    color: #b00;
+  }
+  30% {
+    color: #a00;
+  }
+  40% {
+    color: #b00;
+  }
+  50% {
+    color: #a00;
+  }
+  60% {
+    color: #b00;
+  }
+  70% {
+    color: #a00;
+  }
+  80% {
+    color: #b00;
+  }
+  90% {
+    color: #a00;
+  }
+  100% {
+    color: #b00;
+  }
+
+}
