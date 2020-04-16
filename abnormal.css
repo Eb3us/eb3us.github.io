@@ -19,6 +19,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 body {
   width: 100vw;
   background-color: #000009;
@@ -37,7 +38,7 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: rgba(255,245,245,0.5);
+  background-color: rgba(255,230,245,0.5);
   height: 12vh;
   margin-top: 35px;
   animation: grow 1s ease-in-out;
@@ -49,13 +50,34 @@ body {
 	animation-fill-mode: forwards;
 	z-index: 3;
 }
-#navbar-in {
+#navbar-inTitle {
+	display: flex;
+	width:35%;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+
+}
+
+.titleNav {
+	font-family: 'Permanent Marker', cursive;
+	margin-left:;
+ font-size: 3em;
+ /*color: #030309;*/
+color:#180820;
+
+}
+#navbar-inLinks {
 	display: flex;
 	width:50%;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: stretch;
-
+}
+.navtitle {
+	font-family: 'Permanent Marker', cursive;
 
 }
 .navlinks {
@@ -67,7 +89,7 @@ body {
 	cursor:pointer;
 	border-left: 1px solid rgba(255,245,245,0);
 	border-right: 1px solid rgba(255,245,245,0.0);
-
+  color: #382840;
 }
 .navlinks:hover {
 	border-left: 1px solid #888;
@@ -139,11 +161,20 @@ body {
   left: 23px;
 }
 
+.sticky #navbar-inTitle {
+	width: 43%;
+}
+.sticky .titleNav {
+	color: #d0d0e8;
+	font-size: 2.5em;
+	text-shadow: 1px -1px 4px #aaa;
+}
+
 .contMargin {
-	margin-top: 65vh;
+	margin-top: 70vh;
 }
 #logo {
-  animation: rotate-in 1s ease-out;
+  animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
   left: 80px;
   top: 20px;
 
@@ -154,7 +185,8 @@ body {
   border-radius: 3%;
   opacity: 0.9;
   box-shadow: 0 0 10px rgba(255,255,255,0.5);
-
+  margin-bottom: 1em;
+	margin-top: 1em;
 
 }
 main {
@@ -170,25 +202,29 @@ main {
 .down  {
   font-family: monospace;
   font-size: 10em;
-  color: #b00;
-  text-shadow: 0px 0px 3px rgba(255,255,255, 0.5);
+  color: #32520a;
+  text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
   font-weight: bold;
   line-height: 45px;
+	width: 5%;
+	margin-left: auto;
+	margin-right: auto;
   }
-  .down-cont:hover .down{
+  .down:hover{
     cursor: pointer;
-    text-shadow: 0px 0px 5px rgba(255,255,255, 0.5);
+    text-shadow: 0px 0px 3px rgba(235,225,190, 0.7);
   }
 
 .container {
   width: 93%;
   height: auto;
-  background-color: rgba(130,235,175,0.8);
+  background-color: rgba(45,50,30,0.97);
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 2em;
   margin-bottom: 5em;
+	color: #89f
 }
 .row {
   display: flex;
