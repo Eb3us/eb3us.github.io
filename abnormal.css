@@ -52,7 +52,7 @@ body {
 }
 #navbar-inTitle {
 	display: flex;
-	width:35%;
+	width:36%;
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
@@ -64,7 +64,7 @@ body {
 .titleNav {
 	font-family: 'Permanent Marker', cursive;
 	margin-left:;
- font-size: 3em;
+ font-size: 3.5vw;
  /*color: #030309;*/
 color:#180820;
 
@@ -175,7 +175,7 @@ color:#180820;
 }
 #logo {
   animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
-  left: 80px;
+  left: 40px;
   top: 20px;
 
 }
@@ -199,18 +199,20 @@ main {
   text-align: center;
 
 }
-.down  {
+#down  {
   font-family: monospace;
   font-size: 10em;
   color: #32520a;
   text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
   font-weight: bold;
   line-height: 45px;
-	width: 5%;
+	width: 7%;
+	
 	margin-left: auto;
 	margin-right: auto;
+	
   }
-  .down:hover{
+  #down:hover{
     cursor: pointer;
     text-shadow: 0px 0px 3px rgba(235,225,190, 0.7);
   }
@@ -242,7 +244,7 @@ main {
     transform: rotate(-360deg);
   }
   100% {
-    left: 80px;
+    left: 40px;
     transform: rotate(0deg);
   }
 }

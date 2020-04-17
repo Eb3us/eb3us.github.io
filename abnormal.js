@@ -43,3 +43,8 @@ var mainCont = document.getElementById("mainCont");
 
 };
 //end NavBar
+
+var fStop = document.getElementById("first-stop");
+function scrollD() {
+  fStop.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
