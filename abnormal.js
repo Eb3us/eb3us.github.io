@@ -23,7 +23,7 @@ function stickyGlobFunc() {
 window.onscroll = function() {stickyFunction()};
 var navbar = document.getElementById("navbar");
 var sticky = navbar.offsetTop;
-var mainCont = document.getElementById("mainCont");
+var mainCont = document.getElementById("intro-tag");
 
 
     function stickyFunction() {
@@ -44,7 +44,14 @@ var mainCont = document.getElementById("mainCont");
 };
 //end NavBar
 
-var fStop = document.getElementById("first-stop");
+
 function scrollD() {
-  fStop.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  var fStop = document.getElementById("mainCont");
+  fStop.scrollIntoView({ behavior: 'smooth' });
+}
+
+function animationRestart() {
+  var logo = document.getElementById("logo");
+  logo.style.webkitAnimationPlayState = "running";
+
 }

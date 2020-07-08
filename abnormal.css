@@ -21,7 +21,7 @@ time, mark, audio, video {
 }
 
 body {
-  width: 100vw;
+  width: 100%;
   background-color: #000009;
   overflow-x: hidden;
   animation: background-imag 0.5s ease-in;
@@ -29,9 +29,9 @@ body {
   background-position: top;
   margin: 0;
   padding: 0;
-  background-position: top;
+  background-position: 0% 0%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:auto;
   background-attachment: fixed;
 
 }
@@ -50,6 +50,7 @@ body {
 	animation-fill-mode: forwards;
 	z-index: 4;
 }
+
 #navbar-inTitle {
 	display: flex;
 	width:36%;
@@ -64,10 +65,10 @@ body {
 .titleNav {
 	font-family: 'Permanent Marker', cursive;
 	margin-left:;
- font-size: 3.5vw;
+ font-size: 4vw;
  /*color: #030309;*/
 color:#180820;
-animation: fade-in 2s ease-in;
+
 }
 #navbar-inLinks {
 	display: flex;
@@ -170,12 +171,12 @@ animation: fade-in 2s ease-in;
 }
 
 .contMargin {
-	margin-top: 70vh;
+	margin-top: 70%;
 }
 #logo {
   animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
   left: 40px;
-  top: 20px;
+  top: 3vh;
 
 }
 
@@ -188,32 +189,45 @@ animation: fade-in 2s ease-in;
 	margin-top: 1em;
 
 }
+.brain:hover {
+	filter: brightness(110%) ;
+
+}
 main {
   display: flex;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
   flex-direction: column;
-  margin-top: 53vh;
+  margin-top: 15vh;
   text-align: center;
-
+  overflow-y: hidden;
+	height: auto;
 }
 #down  {
   font-family: monospace;
   font-size: 10em;
-  color: #32520a;
   text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
   font-weight: bold;
-  line-height: 45px;
-	width: 7%;
+  line-height: 50px;
+	width: 18%;
 	margin-left: auto;
 	margin-right: auto;
 	animation: fade-in 2s ease-out;
+  text-align: center;
+	overflow: hidden;
+	color: #177;
+	background: -moz-linear-gradient(#8ee, #033);
+   -moz-background-clip: text;
+   -moz-text-fill-color: transparent;
 
   }
   #down:hover{
     cursor: pointer;
-    text-shadow: 0px 0px 3px rgba(235,225,190, 0.7);
+		background: -moz-linear-gradient(#fff, #066);
+		 -moz-background-clip: text;
+		 -moz-text-fill-color: transparent;
+		 color: #1bb;
   }
 
 .container {
@@ -225,7 +239,7 @@ main {
   text-align: center;
   padding: 2em;
   margin-bottom: 5em;
-	color: #89f;
+	color: #32920a;
 animation: fade-in 2.5s ease-out;
 }
 .row {
@@ -240,7 +254,7 @@ animation: fade-in 2.5s ease-out;
 .cover {
 	margin:0;
 	width: 100%;
-	height: 150vh;
+	height: 250%;
 	background-color: #040008;
 	animation: disapear 2s ease-out 1s forwards;
 	position: absolute;
@@ -248,7 +262,31 @@ animation: fade-in 2.5s ease-out;
 	left:0;
 	z-index: -1;
 }
+.intro-tag {
+	margin-top: 20vh;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 20vh;
+	background-color: rgba(225,200,225,0.4);
+	z-index: -1;
+	border-radius: 10px;
+	animation: 2s fade-in;
+	font-family: monospace;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
+	text-shadow: 2px 2px 4px rgba(55,30,55,0.8);
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.6), -2px -2px 8px rgba(255,255,255,0.9);
 
+}
+h1 {
+font-size: 1.6em;
+}
+h2 {
+	font-size: 1.4em;
+}
 /*ANIMATIONS*/
 
 @keyframes rotate-in {
