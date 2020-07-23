@@ -45,7 +45,7 @@ body {
   box-shadow: 0px 2px 50px 0px rgba(0,0,0,1);
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: stretch;
 	animation-fill-mode: forwards;
 	z-index: 4;
@@ -54,29 +54,26 @@ body {
 
 #navbar-inTitle {
 	display: flex;
-	width:36%;
+	width:100%;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: center;
 	overflow: hidden;
 	white-space: nowrap;
+
 
 }
 
 .titleNav {
 	font-family: 'Permanent Marker', cursive;
-
- font-size: 4.2vw;
+	margin-left:7vw;
+ font-size: 9vw;
  /*color: #030309;*/
 color:#180820;
 
 }
 #navbar-inLinks {
-	display: flex;
-	width:50%;
-	flex-direction: row;
-	justify-content: space-evenly;
-	align-items: stretch;
+	display: none;
 }
 
 .navlinks {
@@ -122,52 +119,54 @@ color:#180820;
 	border-left: 1px solid #222;
 	border-right: 1px solid #222;
 }
-.sticky #logo {
+ #logo {
 	width: 40px;
 	height: 40px;
 	border: 2px solid black;
-	top: 5px;
-	left: 20px;
-	overflow: visible;
+	top: 50px;
+	left: 15px;
+	overflow: hidden;
 }
-.sticky #logo::before {
+#logo::before {
 	border-width: 45px 22.5px 12.5px 15.5px;
 	left: -27px;
 	top: -48px;
 	transform: rotate(250deg);
 }
-.sticky #logo2::before {
+#logo2::before {
 	border-width: 45px 32.5px 18.5px 15.5px;
 	left: -32px;
 	top: -42px;
 	transform: rotate(250deg);
 }
-.sticky #logo::after {
+#logo::after {
 	width: 10.5px;
   height: 32px;
   top :1px;
   left: 22px;
 }
-.sticky #logo2::after {
+#logo2::after {
 	width: 15px;
   height: 37px;
   top :3.5px;
   left: 24.5px;
 }
-.sticky #logo-line {
+#logo-line {
 	top: 16px;
   left: -2px;
 	height: 3px;
 }
-.sticky #logo-line::after{
+#logo-line::after{
 	border-width: 6px 6px 6px 6px;
   bottom:-4.5px;
   left: 23px;
 }
 
-.sticky #navbar-inTitle {
-	width: 43%;
+.sticky #logo {
+	top: 5px;
+	left: 15px;
 }
+
 .sticky .titleNav {
 	color: #d0d0e8;
 	font-size: 2.5em;
@@ -180,8 +179,7 @@ color:#180820;
 
 #logo {
   animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
-  left: 3.3vw;
-  top: 3vh;
+
 
 }
 
@@ -200,14 +198,12 @@ color:#180820;
 }
 main {
   display: flex;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
   flex-direction: column;
   margin-top: 15vh;
   text-align: center;
   overflow-y: hidden;
 	height: auto;
+	align-items: center;
 }
 #down  {
   font-family: monospace;
@@ -215,7 +211,7 @@ main {
   text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
   font-weight: bold;
   line-height: 50px;
-	width: 15vw;
+	width: 35vw;
 	height: 24vh;
 	margin-left: auto;
 	margin-right: auto;
@@ -239,29 +235,36 @@ main {
   }
 
 .container {
-  width: 93%;
-  height: auto;
-  background-color: #060010;
+  width: 80%;
+	height: auto;
+	padding: 2em 0;
+  background-color: rgba(0, 0 ,10, 0.95);
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 2em;
   margin-bottom: 5em;
 	color: #32920a;
-animation: fade-in 2.5s ease-out;
+ animation: fade-in 2.5s ease-out;
+ align-items:center;
+justify-content:space-between;
+
 }
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+	justify-content: space-between;
+	align-items:center;
+
 
 }
 .column {
-  width: 45%;
-  margin: 2.5%;
+	width: 80%;
   overflow: hidden;
 	border-radius: 10px;
 	background-color: rgba(180, 250, 180, 0.1);
 	padding: 0.5em;
+	align-items:center;
+	margin: 1em 0;
 }
 .cover {
 	margin:0;
@@ -275,10 +278,11 @@ animation: fade-in 2.5s ease-out;
 	z-index: -1;
 }
 .intro-tag {
+	padding: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	width: 80%;
-	height: 20vh;
+	height: 10vh;
 	background-color: rgba(225,200,225,0.4);
 	z-index: -1;
 	border-radius: 5px;
@@ -287,7 +291,7 @@ animation: fade-in 2.5s ease-out;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 2vw;
+	font-size: 1.8em;
 	text-shadow: 2px 2px 4px rgba(55,30,55,0.8);
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.6), -2px -2px 8px rgba(255,255,255,0.9);
 
@@ -309,7 +313,7 @@ h2 {
     transform: rotate(-360deg);
   }
   100% {
-    left: 40px;
+    left: 15px;
     transform: rotate(0deg);
   }
 }

@@ -45,13 +45,22 @@ var mainCont = document.getElementById("intro-tag");
 //end NavBar
 
 
-function scrollD() {
+function scrollWorks() {
   var fStop = document.getElementById("mainCont");
-  fStop.scrollIntoView({ behavior: 'smooth' });
+      fStop.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollAbout() {
+  var fStop = document.getElementById("about");
+      fStop.scrollIntoView({ behavior: 'smooth' });
+}
+
+function scrollContact() {
+  var fStop = document.getElementById("contact");
+      fStop.scrollIntoView({ behavior: 'smooth' });
 }
 
 function animationRestart() {
-  var logo = document.getElementById("logo");
-  logo.style.webkitAnimationPlayState = "running";
+
 
 }

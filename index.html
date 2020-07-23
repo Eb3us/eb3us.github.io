@@ -5,7 +5,8 @@
     <title>ABnormal Design</title>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="logo2.css" type="text/css" >
-<link rel="stylesheet" href="abnormal.css" type="text/css" >
+<link rel="stylesheet" href="abnormal.css" type="text/css" media="screen and (min-width: 1024px)">
+<link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width: 1024px)">
 <link href="abico.ico" rel="shortcut icon">
 </head>
 <body>
@@ -17,25 +18,25 @@
               <h1 class="titleNav">Abnormal Design</h1>
             </div>
       <nav id="navbar-inLinks">
-      <div class="navlinks"><a href="#">Works</a></div>
-      <div class="navlinks"><a href="#">About</a></div>
-      <div class="navlinks"><a href="#">Contact</a></div>
+      <div onclick="scrollWorks()" id="nav-works" class="navlinks"><p>Works</p></div>
+      <div onclick="scrollAbout()" id="nav-about" class="navlinks"><p>About</p></div>
+      <div id="nav-contact" class="navlinks"><p>Contact</p></div>
       </nav>
 </div>
 </header>
 <div id="intro-tag" class="intro-tag">"Web design for times when normal is just not enough..."</div>
 <main id="mainCont">
 
-    <div id="down" onclick="scrollD()" title="Learn more about ABnormal..">
+    <div id="down" onclick="scrollWorks()" title="Learn more about ABnormal..">
 
-  <p style="transform:rotate(90deg);font-family:verdana">}</p>
-  <p style="margin-left:-25px;margin-bottom:0.5em;transform:rotate(270deg)"><</p>
+  <!--<p style="transform:rotate(90deg);font-family:verdana">}</p>
+  <p style="margin-left:-25px;margin-bottom:0.5em;transform:rotate(270deg)"><</p>-->
 </div>
 
   <br>
 
 <div id="first-stop" class="container">
-  <h1>Works</h1>
+  <h1 class="titleSmall1">Works</h1>
   <div class="row">
 
   <div class="column">
@@ -44,14 +45,15 @@
     <a href="https://southerncrossreview.org" title="Visit Abnormal Design's first webpage!"><img class="brain" src="scr.png" alt=""></a>
   </div>
   <div class="column">
-    <img class="brain" src="abbrain.jpg" alt="">
-    <p>sdalsdkjals kdjalskdjlaskdjalskdj lasdasdasdasdsdas dasdasdsdasdas dasdsdasdasda sdsdasdasdasd</p>
+    <a href="https://www.rsarchive.org/" title="Visit the Rudolf Steiner Archive & eLib"><img class="brain" src="rsarchive1.jpg" alt=""></a>
+    <h2>Rudolf Steiner Archive</h2><br>
+    <p>With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!</p>
   </div>
 </div>
 </div>
 </div>
-<div class="container">
-  <h1>THIS TITLE IS BORING</h1>
+<div class="container" id="about">
+  <h1 class="titleSmall1">About</h1>
   <div class="row">
   <div class="column">
     <p>sdasdasdas dsdasdasdasdsdasdasdasdsdasd asdasdsda sdasdasdsd asdasdasdsdasdasd asdsdasdasdasd</p>
