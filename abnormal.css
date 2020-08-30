@@ -101,6 +101,7 @@ body {
 	text-decoration: none;
 	animation: fade-in 2s ease-out forwards;
   	color: #402845;
+	animation-play-state: paused;
 }
 .navlinks:hover p {
 	color:#003;
@@ -180,10 +181,10 @@ body {
 }
 
 #logo {
-  animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
-  left: 3.3vw;
-  top: 3vh;
-
+  	animation: rotate-in 1s ease-out, color 0.5s ease-in-out 3.3s;
+  	left: 3.3vw;
+  	top: 3vh;
+	animation-play-state: paused;
 }
 
 .brain {
@@ -228,7 +229,7 @@ main {
 	background-repeat: no-repeat;
 	background-size:auto;
 	/*background: -moz-linear-gradient(#8ee, #033);*/
-
+       	animation-play-state: paused;
 
   }
   #down:hover{
@@ -251,6 +252,7 @@ main {
 	color: #32920a;
 	animation: fade-in 2.5s ease-out;
  	box-shadow: 2px 7px 5px rgba(10,0,10,0.4);
+	animation-play-state: paused;
 }
 .row {
   display: flex;
@@ -300,7 +302,7 @@ main {
 	text-shadow: 2px 2px 4px rgba(55,30,55,0.8);
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.6), -2px -2px 8px rgba(255,255,255,0.9);
 	padding-bottom: 1em;
-
+	animation-play-state: paused;
 }
 .titleSmall1 {
 font-size: 2em;

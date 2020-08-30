@@ -1,6 +1,12 @@
 $(window).on("load", function() {
-	$(".loading").fadeOut(2000);
-	$(".navbar").css("animation-play-state", "running");
+	$(".loading").fadeOut(1000, function() {
+		$(".navbar").css("animation-play-state", "running");
+		$(".navlinks p").css("animation-play-state", "running");
+		$("#logo").css("animation-play-state", "running");
+		$("#down").css("animation-play-state", "running");
+		$(".container").css("animation-play-state", "running");
+		$(".intro-tag").css("animation-play-state", "running");
+	});
 });
 //script to execute various onload functions: "loadEvent"
 
