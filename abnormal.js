@@ -1,5 +1,6 @@
 $(window).on("load", function() {
 	$(".loading").fadeOut(2000);
+	$(".navbar").css("animation-play-state", "running");
 });
 //script to execute various onload functions: "loadEvent"
 
