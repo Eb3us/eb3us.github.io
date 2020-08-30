@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	$(".loading").fadeOut(1000);
+$(window).on("load", function() {
+	$(".loading").fadeOut(2000);
 });
 //script to execute various onload functions: "loadEvent"
 
