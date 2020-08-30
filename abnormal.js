@@ -1,4 +1,8 @@
+$(document).ready(function(){
+	$(".loading").fadeOut(1000);
+});
 //script to execute various onload functions: "loadEvent"
+
 function addLoadEvent(func) {
   var oldonload = window.onload;
   if (typeof window.onload != 'function') {
