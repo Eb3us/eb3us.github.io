@@ -33,7 +33,7 @@ body {
 	  background-repeat: no-repeat;
 	  background-size:auto;
 	  background-attachment: fixed;
-
+	  overflow-y: hidden;
 }
 
 .navbar {
@@ -188,41 +188,42 @@ body {
 }
 
 .brain {
-  width: 15em;
-  border-radius: 3%;
-  opacity: 0.9;
-  box-shadow: 0 0 10px rgba(255,255,255,0.5);
-  margin-bottom: 1em;
+  	width: 15em;
+  	border-radius: 3%;
+  	opacity: 0.9;
+  	box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  	margin-bottom: 1em;
 	margin-top: 1em;
 
 }
+
 .brain:hover {
 	filter: brightness(110%) ;
 
 }
 main {
-  display: flex;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  flex-direction: column;
-  margin-top: 8vh;
-  text-align: center;
-  overflow-y: hidden;
+  	display: flex;
+  	width: 75%;
+  	margin-left: auto;
+  	margin-right: auto;
+  	flex-direction: column;
+  	margin-top: 8vh;
+  	text-align: center;
+  	overflow-y: hidden;
 	height: auto;
 }
 #down  {
-  font-family: monospace;
-  font-size: 10em;
-  text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
-  font-weight: bold;
-  line-height: 50px;
+  	font-family: monospace;
+  	font-size: 10em;
+  	text-shadow: 0px 0px 3px rgba(100,0,120, 0.5);
+  	font-weight: bold;
+  	line-height: 50px;
 	width: 15vw;
 	height: 24vh;
 	margin-left: auto;
 	margin-right: auto;
 	animation: fade-in 2s ease-out;
-  text-align: center;
+  	text-align: center;
 	overflow: hidden;
 	color: #177;
 	background-image: url(down.png);
@@ -232,37 +233,30 @@ main {
        	animation-play-state: paused;
 
   }
-  #down:hover{
-    cursor: pointer;
-
-		background-image: url(downH.png);
-		background-repeat: no-repeat;
-		background-size:auto;
-  }
 
 .container {
-  width: 93%;
-  height: auto;
-  background-color: #060010;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  padding: 2em;
-  margin-bottom: 5em;
+  	width: 93%;
+  	height: auto;
+  	background-color: #060010;
+  	display: flex;
+  	flex-direction: column;
+  	text-align: center;
+  	padding: 2em;
+  	margin-bottom: 5em;
 	color: #32920a;
 	animation: fade-in 2.5s ease-out;
  	box-shadow: 2px 7px 5px rgba(10,0,10,0.4);
 	animation-play-state: paused;
 }
 .row {
-  display: flex;
-  flex-direction: row;
+  	display: flex;
+  	flex-direction: row;
 
 }
 .column {
-  width: 45%;
-  margin: 2.5%;
-  overflow: hidden;
+  	width: 45%;
+  	margin: 2.5%;
+  	overflow: hidden;
 	border-radius: 10px;
 	background-color: rgba(180, 250, 180, 0.1);
 	padding: 0.5em;
@@ -303,6 +297,15 @@ main {
 	box-shadow: 2px 2px 8px rgba(0,0,0,0.6), -2px -2px 8px rgba(255,255,255,0.9);
 	padding-bottom: 1em;
 	animation-play-state: paused;
+}
+
+.abbrain {
+	 width: 44vw;
+ 	 border-radius: 3%;
+ 	 opacity: 0.9;
+ 	 box-shadow: 0 0 10px rgba(255,255,255,0.5);
+ 	 margin-bottom: 1em;
+ 	 margin-top: 1em;
 }
 .titleSmall1 {
 font-size: 2em;
