@@ -17,10 +17,13 @@ const about = Array.from(document.querySelectorAll(".about"))
 const subtitle = document.querySelector("#subtitle")
 const sCRText = document.querySelector("#scr-text")
 const rSAText = document.querySelector("#rsa-text")
+const aboutText = document.querySelector("#about-text")
 let sticky = navbar.offsetTop
 
 //on load function
+
 window.addEventListener("load", () => {
+  document.body.scrollTop = 0
   setTimeout(() => {
     loadingAnimation.style.animationPlayState = "running"
     navbar.style.animationPlayState = "running"
@@ -52,30 +55,27 @@ aboutLink.addEventListener("click", () => {
 
 //English - Spanish
 english.addEventListener("click", () => {
-  works.forEach(element => {
-    element.innerHTML = textLanguage.works[0]
-  })
-  about.forEach(element => {
-    element.innerHTML = textLanguage.about[0]
-  })
-  contactLink.children[0].innerHTML = textLanguage.contact[0]
-  subtitle.innerHTML = textLanguage.subtitle[0]
-  sCRText.innerHTML = textLanguage.SCRText[0]
-  rSAText.innerHTML = textLanguage.RSAText[0]
+  englishSpanish(0)
 })
 
 spanish.addEventListener("click", () => {
+  englishSpanish(1)
+})
+
+// english or spanish function. 0 for english 1 for spanish
+function englishSpanish(number) {
   works.forEach(element => {
-    element.innerHTML = textLanguage.works[1]
+    element.innerHTML = textLanguage.works[number]
   })
   about.forEach(element => {
-    element.innerHTML = textLanguage.about[1]
+    element.innerHTML = textLanguage.about[number]
   })
-  contactLink.children[0].innerHTML = textLanguage.contact[1]
-  subtitle.innerHTML = textLanguage.subtitle[1]
-  sCRText.innerHTML = textLanguage.SCRText[1]
-  rSAText.innerHTML = textLanguage.RSAText[1]
-})
+  contactLink.children[0].innerHTML = textLanguage.contact[number]
+  subtitle.innerHTML = textLanguage.subtitle[number]
+  sCRText.innerHTML = textLanguage.SCRText[number]
+  rSAText.innerHTML = textLanguage.RSAText[number]
+  aboutText.innerHTML = textLanguage.aboutText[number]
+}
 
 //Navbar sticky function
 function stickyFunction() {
@@ -88,7 +88,7 @@ function stickyFunction() {
   }
 }
 
-//end NavBar
+//English - Spanish object
 const textLanguage = {
   works: ["Works", "Proyectos"],
   about: ["About", "Equipo"],
@@ -105,5 +105,8 @@ const textLanguage = {
     "With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!",
     "Con servidores en casi todos los paises, el Rudolf Steriner Archive es una verdadera precesencia del movimiento atroposofico en la red.",
   ],
-  aboutText: ["bla bla", "wada wada"],
+  aboutText: [
+    "Abnormal Design is a small web develompent... etc",
+    "Abnormal Design es una pequeña empresa de desarollo web... etc",
+  ],
 }
