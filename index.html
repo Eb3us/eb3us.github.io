@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <meta charset="utf-8">
     <title>ABnormal Design</title>
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="logo2.css" type="text/css" >
-<link rel="stylesheet" href="abnormal.css" type="text/css" media="screen and (min-width: 1024px)">
-<link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width: 1024px)">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href="abico.ico" rel="shortcut icon">
-</head>
-<body>
-	<div class="loading"><img src="load.svg" alt="loading"></div>
-<header>
-    <div id="navbar" class="navbar">
-      <div id="logo" title="Home"><div id="logo-line"></div><div id="logo2"></div></div>
-      <div id="navbar-inTitle">
-              <h1 class="titleNav">Abnormal Design</h1>
-            </div>
-      <nav id="navbar-inLinks">
-      <div onclick="scrollWorks()" id="nav-works" class="navlinks"><p>Works</p></div>
-      <div onclick="scrollAbout()" id="nav-about" class="navlinks"><p>About</p></div>
-      <div id="nav-contact" class="navlinks"><p>Contact</p></div>
-      </nav>
-</div>
-</header>
-<div id="intro-tag" class="intro-tag"><img class="abbrain" src="abbrain.png"g alt="">"Web design for times when normal is just not enough..."</div>
-<main id="mainCont">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="logo2.css" type="text/css" >
+    <link rel="stylesheet" href="abnormal.css" type="text/css" media="screen and (min-width: 1024px)">
+    <link rel="stylesheet" href="mobile.css" type="text/css" media="screen and (max-width: 1024px)">
+    <script src="abnormal.js" defer></script>
+  </head>
 
+  <body>
 
-  <!--<p style="transform:rotate(90deg);font-family:verdana">}</p>
-  <p style="margin-left:-25px;margin-bottom:0.5em;transform:rotate(270deg)"><</p>-->
-</div>
+    <div class="loading"><img src="load.svg" alt="loading"></div>
 
-  <br>
+    <header>
+      <div id="navbar" class="navbar">
+        <div id="logo" title="Home">
+          <div id="logo-line"></div>
+          <div id="logo2"></div>
+        </div>
+        <div id="navbar-inTitle">
+            <h1 class="titleNav">Abnormal Design</h1>
+        </div>
+        <nav id="navbar-inLinks">
+          <div id="nav-works" class="navlinks"><p class="works">Works</p></div>
+          <div id="nav-about" class="navlinks"><p class="about">About</p></div>
+          <div id="nav-contact" class="navlinks"><p>Contact</p></div>
+          <div id="spanish" class="navlinks" style="flex-shrink:1;flex-grow:0.25"><img src="flag_spanish.jpg" class="flag"></div>
+          <div id="english" class="navlinks" style="flex-shrink:1;flex-grow:0.25"><img src="flag_english.jpg" class="flag"></div>
+        </nav>
+      </div>
+    </header>
 
-<div id="first-stop" class="container">
-  <h1 class="titleSmall1">Works</h1><br>
-  <div class="row">
+    <div id="intro-tag" class="intro-tag">
+      <img class="abbrain" src="abbrain.png"g alt=""><p id="subtitle">"Web design for times when normal is just not enough..."</p>
+    </div>
 
-  <div class="column">
-    <h2>SoutherCrossReview</h2><br>
-    <p style="font-size:larger">Review of Anthroposophy, fiction, education, science, current events, essays, book reviews, poetry</p><br>
-    <a href="https://southerncrossreview.org" title="Visit Abnormal Design's first webpage!"><img class="brain" src="scr2.png" alt=""></a>
-  </div><br>
-  <div class="column">
-<img class="brain" src="rsarchive2.jpg" alt=""><br>
-    <h2>Rudolf Steiner Archive</h2>
-        <p style="font-style:italic;text-align: center">(In progress)</p>
-        <br>
-    <p>With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!</p>
-  </div>
-</div>
-</div>
-</div>
-<div class="container" id="about">
-  <h1 class="titleSmall1">About</h1>
-  <div class="row">
-  <div class="column">
-    <p>sdasdasdas dsdasdasdasdsdasdasdasdsdasd asdasdsda sdasdasdsd asdasdasdsdasdasd asdsdasdasdasd</p>
-    <img class="brain" src="abbrain.png"g alt="">
-  </div>
-  <div class="column">
-    <img class="brain" src="abbrain.png"g alt="">
-    <p>sdalsdkjals kdjalskdjlaskdjalskdj lasdasdasdasdsdas dasdasdsdasdas dasdsdasdasda sdsdasdasdasd</p>
-  </div>
-</div>
-</div>
+    <main id="mainCont">
 
-</main>
-<script src="abnormal.js"></script>
-</body>
+      <section id="first-stop" class="container">
+        <h1 class="titleSmall1 works">Works</h1>
+        <div class="row">
+          <div class="column">  
+            <h2>SoutherCrossReview</h2><br>
+            <p style="font-size:larger" id="scr-text">Review of Anthroposophy, fiction, education, science, current events, essays, book reviews, poetry</p>
+            <a href="https://southerncrossreview.org" title="Visit Abnormal Design's first webpage!">
+              <img class="brain" src="scr2.png" alt="">
+            </a>
+          </div>
+          <div class="column">
+            <img class="brain" src="rsarchive2.jpg" alt="">
+              <h2>Rudolf Steiner Archive</h2>
+              <p style="font-style:italic;text-align: center">(W.I.P.)</p>
+              <br>
+              <p id="rsa-text">With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container" id="about">
+        <h1 class="titleSmall1 about">About</h1>
+        <div class="column single-column">
+          <p>Abnormal Design is a small web develompent   </p>
+          <img class="mepic" src="me-pic.jpg"g alt="">
+       </div>
+      </section>
+
+    </main>
+  
+  </body>
 </html>

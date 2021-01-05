@@ -1,77 +1,109 @@
-$(window).on("load", function() {
-	$(".loading").fadeOut(1000, function() {
-		$(".navbar").css("animation-play-state", "running");
-		$(".navlinks p").css("animation-play-state", "running");
-		$("#logo").css({"animation-play-state":"running","display":"block"});
-		$(".container").css("animation-play-state", "running");
-		$(".intro-tag").css("animation-play-state", "running");
-		$("body").css("overflow-y", "scroll");
-	});
-});
-//script to execute various onload functions: "loadEvent"
+//define elements
+const loadingAnimation = document.querySelector(".loading")
+const navbar = document.querySelector(".navbar")
+const logo = document.querySelector("#logo")
+const container = Array.from(document.querySelectorAll(".container"))
+const introTag = document.querySelector(".intro-tag")
+const links = Array.from(document.getElementsByClassName("navlinks"))
+const worksLink = document.querySelector("#nav-works")
+const aboutLink = document.querySelector("#nav-about")
+const contactLink = document.querySelector("#nav-contact")
+const worksDiv = document.querySelector("#mainCont")
+const aboutDiv = document.querySelector("#about")
+const english = document.querySelector("#english")
+const spanish = document.querySelector("#spanish")
+const works = Array.from(document.querySelectorAll(".works"))
+const about = Array.from(document.querySelectorAll(".about"))
+const subtitle = document.querySelector("#subtitle")
+const sCRText = document.querySelector("#scr-text")
+const rSAText = document.querySelector("#rsa-text")
+let sticky = navbar.offsetTop
 
-function addLoadEvent(func) {
-  var oldonload = window.onload;
-  if (typeof window.onload != 'function') {
-    window.onload = func;
+//on load function
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loadingAnimation.style.animationPlayState = "running"
+    navbar.style.animationPlayState = "running"
+    links.forEach(link => {
+      link.children[0].style.animationPlayState = "running"
+    })
+    logo.style.animationPlayState = "running"
+    logo.style.display = "block"
+    container.forEach(c => {
+      c.style.animationPlayState = "running"
+    })
+    introTag.style.animationPlayState = "running"
+    document.querySelector("body").style.overflowY = "scroll"
+  }, 1000)
+  setTimeout(() => {
+    loadingAnimation.style.display = "none"
+  }, 1000)
+  window.onscroll = () => {
+    stickyFunction()
+  }
+})
+//links go-to function
+worksLink.addEventListener("click", () => {
+  worksDiv.scrollIntoView({ behavior: "smooth" })
+})
+aboutLink.addEventListener("click", () => {
+  aboutDiv.scrollIntoView({ behavior: "smooth" })
+})
+
+//English - Spanish
+english.addEventListener("click", () => {
+  works.forEach(element => {
+    element.innerHTML = textLanguage.works[0]
+  })
+  about.forEach(element => {
+    element.innerHTML = textLanguage.about[0]
+  })
+  contactLink.children[0].innerHTML = textLanguage.contact[0]
+  subtitle.innerHTML = textLanguage.subtitle[0]
+  sCRText.innerHTML = textLanguage.SCRText[0]
+  rSAText.innerHTML = textLanguage.RSAText[0]
+})
+
+spanish.addEventListener("click", () => {
+  works.forEach(element => {
+    element.innerHTML = textLanguage.works[1]
+  })
+  about.forEach(element => {
+    element.innerHTML = textLanguage.about[1]
+  })
+  contactLink.children[0].innerHTML = textLanguage.contact[1]
+  subtitle.innerHTML = textLanguage.subtitle[1]
+  sCRText.innerHTML = textLanguage.SCRText[1]
+  rSAText.innerHTML = textLanguage.RSAText[1]
+})
+
+//Navbar sticky function
+function stickyFunction() {
+  if (window.pageYOffset - 40 >= sticky) {
+    navbar.classList.add("sticky")
+    introTag.classList.add("contMargin")
   } else {
-    window.onload = function() {
-      if (oldonload) {
-        oldonload();
-      }
-      func();
-    }
+    navbar.classList.remove("sticky")
+    introTag.classList.remove("contMargin")
   }
 }
 
-addLoadEvent(stickyGlobFunc);
-//end LoadEvent
-
-
-
-//Sticky NavBar
-function stickyGlobFunc() {
-window.onscroll = function() {stickyFunction()};
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-var mainCont = document.getElementById("intro-tag");
-
-
-    function stickyFunction() {
-     if ((window.pageYOffset - 40) >= sticky) {
-       navbar.classList.add("sticky");
-       mainCont.classList.add("contMargin");
-       navbar.style.backgroundImage = imgPath;
-
-     } else {
-       navbar.classList.remove("sticky");
-       mainCont.classList.remove("contMargin");
-       navbar.style.backgroundImage = "";
-     }
-}
-
-
-
-};
 //end NavBar
-
-
-function scrollWorks() {
-  var fStop = document.getElementById("mainCont");
-      fStop.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollAbout() {
-  var fStop = document.getElementById("about");
-      fStop.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollContact() {
-  var fStop = document.getElementById("contact");
-      fStop.scrollIntoView({ behavior: 'smooth' });
-}
-
-function animationRestart() {
-
-
+const textLanguage = {
+  works: ["Works", "Proyectos"],
+  about: ["About", "Equipo"],
+  contact: ["Contact", "Contacto"],
+  subtitle: [
+    "Web design for times when normal is just not enough...",
+    "Diseño web para tiempos donde lo normal no es suficiente...",
+  ],
+  SCRText: [
+    "Review of Anthroposophy, fiction, education, science, current events, essays, book reviews, poetry",
+    "Revista web con contenidos que abarcan antroposofia, ficción, educación, ciencia, sucesos actuales, ensayos, critica literaria, poesia, musica y más. (Bilingüe)",
+  ],
+  RSAText: [
+    "With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!",
+    "Con servidores en casi todos los paises, el Rudolf Steriner Archive es una verdadera precesencia del movimiento atroposofico en la red.",
+  ],
+  aboutText: ["bla bla", "wada wada"],
 }

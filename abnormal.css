@@ -89,7 +89,8 @@ body {
 	cursor:pointer;
 	border-left: 1px solid rgba(255,245,245,0);
 	border-right: 1px solid rgba(255,245,245,0.0);
-  	color: #382840;
+	  color: #382840;
+	  flex-grow: 1;
 
 }
 .navlinks:hover {
@@ -105,6 +106,10 @@ body {
 }
 .navlinks:hover p {
 	color:#003;
+}
+.flag {
+	width: 30px;
+	
 }
 .sticky {
 	background-color: #101010;
@@ -194,7 +199,14 @@ body {
   	box-shadow: 0 0 10px rgba(255,255,255,0.5);
   	margin-bottom: 1em;
 	margin-top: 1em;
-
+}
+.mepic {
+	width: 19em;
+  	border-radius: 3%;
+  	opacity: 0.9;
+  	box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  	margin-bottom: 1em;
+	margin-top: 1em;
 }
 
 .brain:hover {
@@ -261,7 +273,9 @@ main {
 	background-color: rgba(180, 250, 180, 0.1);
 	padding: 0.5em;
 }
-
+.single-column {
+	align-self: center;
+}
 .loading { 
 	margin:0;
 	width: 100%;
@@ -271,6 +285,10 @@ main {
 	top:0;
 	left:0;
 	z-index: 5;
+	animation: 1s disapear;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+
 }
 .loading img {
 	position: absolute;
