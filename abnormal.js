@@ -77,17 +77,6 @@ function englishSpanish(number) {
   aboutText.innerHTML = textLanguage.aboutText[number]
 }
 
-//Navbar sticky function
-function stickyFunction() {
-  if (window.pageYOffset - 40 >= sticky) {
-    navbar.classList.add("sticky")
-    introTag.classList.add("contMargin")
-  } else {
-    navbar.classList.remove("sticky")
-    introTag.classList.remove("contMargin")
-  }
-}
-
 //English - Spanish object
 const textLanguage = {
   works: ["Works", "Proyectos"],
@@ -109,4 +98,14 @@ const textLanguage = {
     "Abnormal Design is a small web develompent... etc",
     "Abnormal Design es una pequeña empresa de desarollo web... etc",
   ],
+}
+//Navbar sticky function
+function stickyFunction() {
+  if (window.pageYOffset - 40 >= sticky) {
+    navbar.classList.add("sticky")
+    introTag.classList.add("contMargin")
+  } else {
+    navbar.classList.remove("sticky")
+    introTag.classList.remove("contMargin")
+  }
 }
