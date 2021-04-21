@@ -1,12 +1,4 @@
-<?php
-if($_POST["send"]) {
-  $sender=$POST["email"];
-  $mail="eb3us2@tutanota.com";
-  $subject="contact Abnormal Design";
-  $message=$POST["message"];
-  mail($mail, $subject, $message, "From: $sender");
-}
-?>
+
 <!DOCTYPE html>
 <html>
   
@@ -86,23 +78,25 @@ if($_POST["send"]) {
       </section>
 
       <section class="container" id="contact">
+
         <h1 class="titleSmall1" id="contact-title">Contact Abnormal Design</h1>
-        <form action="index.php" method="POST">
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLScnlKtiWmYlVzbBCnKJ9SXWK6UNT4H2ZI77haIglbBD2nJYJQ/formResponse?" target="hidden_iframe" name="gform" id="gform" enctype="text/plain" onsubmit="submitted=true;" method="POST">
+          <div id="email-text" class="form-text">Your email:</div>
+          <input type="email" name="entry.795413712" required>
+          <br>
+          <label>
+            <div id="message-text" class="form-text">Your message:</div>
+            <textarea name="entry.407266328" required></textarea>
+          </label>
 
-  
-    <div id="email-text" class="form-text">Your email:</div>
-    <input type="email" name="email" required>
-  <br>
-  <label>
-    <div id="message-text" class="form-text">Your message:</div>
-    <textarea name="message" required></textarea>
-  </label>
+           <!-- your other form fields go here -->
+          <div class="submit">
+           <button type="submit">Send</button>
+          </div>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 
-  <!-- your other form fields go here -->
- <div class="submit">
-  <button type="submit" name="send">Send</button>
-  </div>
-</form>
       </section>
     </main>
   
