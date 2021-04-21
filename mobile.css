@@ -24,8 +24,7 @@ body {
   width: 100%;
   background-color: #000009;
   overflow-x: hidden;
-  animation: background-imag 0.5s ease-in;
-  animation-iteration-count: infinite;
+  background-image: url("abnormal2.png");
   background-position: top;
   margin: 0;
   padding: 0;
@@ -35,32 +34,63 @@ body {
   background-attachment: fixed;
 
 }
+.loading { 
+	margin:0;
+	width: 100%;
+	height: 250%;
+	background-color: #040008;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 5;
+	animation: 1s disapear;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
 
+}
+.loading img {
+	position: absolute;
+	top: 50vh;
+	left: 35vw;
+}
+.imagen_cursor{
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	animation: twinlke 0.6s ease-in;
+	animation-iteration-count: infinite;
+	filter: brightness(110%)
+}
 .navbar {
   width: 100%;
   background-color: rgba(255,230,245,0.5);
-  height: 12vh;
-  margin-top: 35px;
+  height: 10em;
+  margin-top: 20px;
   animation: grow 1s ease-in-out;
   box-shadow: 0px 2px 50px 0px rgba(0,0,0,1);
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: stretch;
 	animation-fill-mode: forwards;
 	z-index: 4;
 	margin-bottom: 20vh;
+	overflow: hidden;
+	
 }
 
 #navbar-inTitle {
 	display: flex;
 	width:100%;
 	flex-direction: row;
-	justify-content: center;
+	justify-content:space-evenly;
 	align-items: center;
 	overflow: hidden;
 	white-space: nowrap;
-
+	
 
 }
 
@@ -68,12 +98,18 @@ body {
 	font-family: 'Permanent Marker', cursive;
 	margin-left:7vw;
  font-size: 9vw;
+ 
  /*color: #030309;*/
 color:#180820;
 
 }
 #navbar-inLinks {
-	display: none;
+	display: flex;
+	background-color: rgba(255,230,245,0.5);
+	margin-top:22px;
+	width: 100%;
+	justify-content: center;
+	
 }
 
 .navlinks {
@@ -86,6 +122,7 @@ color:#180820;
 	border-left: 1px solid rgba(255,245,245,0);
 	border-right: 1px solid rgba(255,245,245,0.0);
   color: #382840;
+  height: 5vh;
 
 }
 .navlinks:hover {
@@ -96,10 +133,14 @@ color:#180820;
 .navlinks p {
 	text-decoration: none;
 	animation: fade-in 2s ease-out forwards;
-  color: #402845;
+  color: #40284
 }
 .navlinks:hover p {
 	color:#003;
+}
+.flag {
+	width: 30px;
+	
 }
 .sticky {
 	background-color: #101010;
@@ -107,7 +148,9 @@ color:#180820;
 	top: 0;
 	left: 0;
 	margin: 0;
-	height: 8vh;
+	height: 6em;
+	width: 100vw;
+	
 }
 .sticky .navlinks p {
 	color: #446;
@@ -119,12 +162,42 @@ color:#180820;
 	border-left: 1px solid #222;
 	border-right: 1px solid #222;
 }
+.sticky #navbar-inTitle {
+height: 2em;
+justify-content: flex-end;
+padding-top: 0;
+margin-top: 0;
+overflow: hidden;
+width: 70%;
+	
+}
+.sticky #navbar-inLinks {
+	background-color: #101010;
+	height: 1em;
+	
+}
+.sticky #navbar-div-1 {
+	height: 2em;
+	
+}
+.sticky #logo {
+	top: 12px;
+	left: 40px;
+}
+
+.sticky .titleNav {
+	color: #d0d0e8;
+	font-size: 2.5em;
+	text-shadow: 1px -1px 4px #aaa;
+	
+	
+}
  #logo {
 	width: 40px;
 	height: 40px;
 	border: 2px solid black;
-	top: 50px;
-	left: 15px;
+	top: 60px;
+	left: 35px;
 	overflow: hidden;
 }
 #logo::before {
@@ -162,16 +235,7 @@ color:#180820;
   left: 23px;
 }
 
-.sticky #logo {
-	top: 5px;
-	left: 15px;
-}
 
-.sticky .titleNav {
-	color: #d0d0e8;
-	font-size: 2.5em;
-	text-shadow: 1px -1px 4px #aaa;
-}
 
 .contMargin {
 	margin-top: 35vh;
@@ -182,7 +246,10 @@ color:#180820;
 
 
 }
-
+.abbrain {
+	border-radius :10px;
+	margin-bottom: 1em;
+}
 .brain {
   width: 80%;
   border-radius: 3%;
@@ -192,9 +259,18 @@ color:#180820;
 	margin-top: 1em;
 
 }
+
 .brain:hover {
 	filter: brightness(110%) ;
 
+}
+.mepic {
+	width: 19em;
+  	border-radius: 3%;
+  	opacity: 0.9;
+  	box-shadow: 0 0 10px rgba(255,255,255,0.5);
+  	margin-bottom: 1em;
+	margin-top: 1em;
 }
 main {
   display: flex;
@@ -281,15 +357,16 @@ justify-content:space-between;
 	padding: 1em;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;
-	height: 10vh;
-	background-color: rgba(225,200,225,0.4);
+	width: 85vw;
+	height: auto;
+	background-color: rgba(225,200,225,0.5);
 	z-index: -1;
 	border-radius: 5px;
 	animation: 2s fade-in;
 	font-family: monospace;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-evenly;
 	align-items: center;
 	font-size: 1.8em;
 	text-shadow: 2px 2px 4px rgba(55,30,55,0.8);
@@ -318,12 +395,7 @@ h2 {
   }
 }
 
-@keyframes background-imag {
-  0% {background-image: url('abnormal1.png');
-}
-100% {background-image: url('abnormal2.png');
-}
-}
+
 @keyframes grow {
  0% {width: 0%;
 color: transparent;
@@ -342,3 +414,18 @@ color:#444;
 	50% {opacity: 0}
 	100% {opacity:1 }
 }
+@keyframes rotate-in {
+	0% {
+	  left: -200px;
+	  transform: rotate(-360deg);
+	}
+	100% {
+	  left: 40px;
+	  transform: rotate(0deg);
+	}
+  }
+  
+  @keyframes twinlke {
+	  0% {opacity: 0;}
+	  100% {opacity: 0.3;}
+  }

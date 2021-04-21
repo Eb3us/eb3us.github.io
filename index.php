@@ -1,3 +1,12 @@
+<?php
+if($_POST["send"]) {
+  $sender=$POST["email"];
+  $mail="eb3us2@tutanota.com";
+  $subject="contact Abnormal Design";
+  $message=$POST["message"];
+  mail($mail, $subject, $message, "From: $sender");
+}
+?>
 <!DOCTYPE html>
 <html>
   
@@ -14,9 +23,10 @@
   <body>
 
     <div class="loading"><img src="load.svg" alt="loading"></div>
-
+    <div class="imagen_cursor"><img src="abnormal3.png"></div>
     <header>
       <div id="navbar" class="navbar">
+        <div id="navbar-div-1">
         <div id="logo" title="Home">
           <div id="logo-line"></div>
           <div id="logo2"></div>
@@ -24,13 +34,16 @@
         <div id="navbar-inTitle">
             <h1 class="titleNav">Abnormal Design</h1>
         </div>
+      </div>
+      
         <nav id="navbar-inLinks">
           <div id="nav-works" class="navlinks"><p class="works">Works</p></div>
           <div id="nav-about" class="navlinks"><p class="about">About</p></div>
-          <div id="nav-contact" class="navlinks"><p><a href="mailto:eb3us2@tutanota.com">Contact</a></p></div>
+          <div id="nav-contact" class="navlinks"><p>Contact</p></div>
           <div id="spanish" class="navlinks" style=";flex-grow:0.25"><img src="flag_spanish.jpg" class="flag"></div>
           <div id="english" class="navlinks" style=";flex-grow:0.25"><img src="flag_english.jpg" class="flag"></div>
         </nav>
+      
       </div>
     </header>
 
@@ -42,8 +55,8 @@
 
       <section id="first-stop" class="container">
         <h1 class="titleSmall1 works">Works</h1>
-        <div class="row">
-          <div class="column">  
+        
+          <div class="column single-column">  
             <h2>SoutherCrossReview</h2><br>
             <p style="font-size:larger" id="scr-text">Review of Anthroposophy, fiction, education, science, current events, essays, book reviews, poetry</p>
             <a href="https://southerncrossreview.org" title="Visit Abnormal Design's first webpage!">
@@ -51,27 +64,46 @@
             </a>
             <p style="font-size: larger" id="scr-text2">Abnormal's first proyect!</p>
           </div>
-          <div class="column">
+          <!-- <div class="column">
             <img class="brain" src="rsarchive2.jpg" alt="">
               <h2>Rudolf Steiner Archive</h2>
               <p style="font-style:italic;text-align: center">(W.I.P.)</p>
               <br>
               <p id="rsa-text">With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!</p>
-          </div>
-        </div>
+          </div> -->
+        
       </section>
 
       <section class="container" id="about">
         <h1 class="titleSmall1 about">About</h1>
         <div class="column single-column">
-          <p id="about-text">Abnormal Design is a small web develompent.. etc.. </p>
+          <p id="about-text">Abnormal Design is a small web-dev project based in Cordoba, Argentina. Founded by me (the guy who's face you see below), the main designer and developer, though helped by many along the way. </p>
           <figure style="text-align:center">
-            <img class="mepic" src="me-pic.jpg"g alt="">
+            <img class="mepic" src="me-pic2.jpg"g alt="">
             <figcaption>Nicolás Gawain Smith</figcaption>
           </figure>
        </div>
       </section>
 
+      <section class="container" id="contact">
+        <h1 class="titleSmall1" id="contact-title">Contact Abnormal Design</h1>
+        <form action="index.php" method="POST">
+
+  
+    <div id="email-text" class="form-text">Your email:</div>
+    <input type="email" name="email" required>
+  <br>
+  <label>
+    <div id="message-text" class="form-text">Your message:</div>
+    <textarea name="message" required></textarea>
+  </label>
+
+  <!-- your other form fields go here -->
+ <div class="submit">
+  <button type="submit" name="send">Send</button>
+  </div>
+</form>
+      </section>
     </main>
   
   </body>
