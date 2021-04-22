@@ -23,6 +23,11 @@ const aboutText = document.querySelector("#about-text")
 const contactTitle = document.querySelector("#contact-title")
 const emailText = document.querySelector("#email-text")
 const messageText = document.querySelector("#message-text")
+const contactForm = document.querySelector("#gform")
+const submitButton = document.querySelector("#submit")
+const alertBox = document.querySelector("#alert-box")
+const alertText = document.querySelector("#alert-text")
+const alertButton = document.querySelector("#alert-button")
 let sticky = navbar.offsetTop
 
 //on load function
@@ -85,7 +90,16 @@ function englishSpanish(number) {
   contactTitle.innerHTML = textLanguage.contactTitle[number]
   emailText.innerHTML = textLanguage.email[number]
   messageText.innerHTML = textLanguage.message[number]
+  submitButton.innerHTML = textLanguage.submit[number]
+  alertText.innerHTML = textLanguage.alertBox[number]
 }
+
+contactForm.addEventListener("submit", () => {
+  alertBox.style.display = "flex"
+})
+alertButton.addEventListener("click", () => {
+  alertBox.style.display = "none"
+})
 
 //English - Spanish object
 const textLanguage = {
@@ -112,6 +126,11 @@ const textLanguage = {
   contactTitle: ["Contact Abnormal Design", "Contactate con nosotros"],
   email: ["Your e-mail address:", "Tu dirección de e-mail:"],
   message: ["Your message:", "Tu mensaje:"],
+  submit: ["Send", "Enviar"],
+  alertBox: [
+    "Thank you for contacting Abnormal Design!<br>We will answer you as soon as possible.",
+    "Gracias por contactarte con Abnormal Design!<br>Te responderemos a la brevedad.",
+  ],
 }
 //Navbar sticky function
 function stickyFunction() {

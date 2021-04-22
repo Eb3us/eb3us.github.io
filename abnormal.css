@@ -452,3 +452,47 @@ textarea:focus {
 .submit {
 	clear: both;
 }
+#alert-box {
+	position: fixed;
+	width: 30%;
+	height: 30%;
+    background-color: #282232;
+	color: #33ee88;
+	box-shadow: 0 0 10px rgba(255,255,255,0.5);
+	text-align: center;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	top: 35%;
+	left: 35%;
+	font-size: 120%;
+	
+
+}
+#alert-button, #submit {
+	background-color: #282232 ;
+	color: #33ee88;
+	border-radius: 0%;
+	border: 1px solid #33ee88;
+	padding: 0.5em;
+	width: 7em;
+	cursor: pointer;
+}
+#alert-button:hover, #sumbit:hover {
+	text-shadow: 0px 0px 2px white;
+}
+#alert-button:active, #submit:active {
+	width: 8em;
+	border: #23de78 inset;
+	
+	color: #23de78;
+	text-shadow: 0px 0px 0px black;
+	background-color: #262030
+}
+#alert-button:active {
+	font-size: 61%;
+}
+#submit:active {
+	font-size: 72%;
+}
