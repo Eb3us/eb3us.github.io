@@ -108,7 +108,7 @@ const textLanguage = {
   contact: ["Contact", "Contacto"],
   subtitle: [
     "Web design for times when normal is just not enough...",
-    "Diseño web para tiempos donde lo normal no es suficiente...",
+    "Diseño web para tiempos en que lo normal no es suficiente...",
   ],
   SCRText: [
     "Review of Anthroposophy, fiction, education, science, current events, essays, book reviews, poetry",
@@ -121,7 +121,7 @@ const textLanguage = {
   // ],
   aboutText: [
     "Abnormal Design is a small web-dev project based in Cordoba, Argentina. Founded by me (the guy who's face you see below), the main designer and developer, though helped by many along the way.",
-    "Abnormal Design es una pequeña empresa de desarollo web de Córdoba, Argentina. Fundada por mi (el tipo que aparece abajo), hago la mayor parte del diseño y programación.",
+    "Abnormal Design es una pequeña empresa de desarollo web de Córdoba, Argentina. Cuenta hasta ahora con una persona, pues el de abajo",
   ],
   contactTitle: ["Contact Abnormal Design", "Contactate con nosotros"],
   email: ["Your e-mail address:", "Tu dirección de e-mail:"],
