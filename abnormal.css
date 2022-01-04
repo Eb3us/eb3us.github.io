@@ -302,6 +302,10 @@ main {
  	box-shadow: 2px 7px 5px rgba(10,0,10,0.4);
 	animation-play-state: paused;
 }
+.container2 {
+	display: flex;
+	
+}
 .row {
   	display: flex;
   	flex-direction: row;

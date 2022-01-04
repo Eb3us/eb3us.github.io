@@ -85,7 +85,7 @@ function englishSpanish(number) {
   subtitle.innerHTML = textLanguage.subtitle[number]
   sCRText.innerHTML = textLanguage.SCRText[number]
   sCRText2.innerHTML = textLanguage.SCRText2[number]
-  // rSAText.innerHTML = textLanguage.RSAText[number]
+  rSAText.innerHTML = textLanguage.RSAText[number]
   aboutText.innerHTML = textLanguage.aboutText[number]
   contactTitle.innerHTML = textLanguage.contactTitle[number]
   emailText.innerHTML = textLanguage.email[number]
@@ -94,9 +94,9 @@ function englishSpanish(number) {
   alertText.innerHTML = textLanguage.alertBox[number]
 }
 
-contactForm.addEventListener("submit", () => {
-  alertBox.style.display = "flex"
-})
+// contactForm.addEventListener("submit", () => {
+//   alertBox.style.display = "flex"
+// })
 alertButton.addEventListener("click", () => {
   alertBox.style.display = "none"
 })
@@ -115,13 +115,13 @@ const textLanguage = {
     "Revista web con contenidos que abarcan antroposofia, ficción, educación, ciencia, sucesos actuales, ensayos, critica literaria, poesia, musica y más. (Bilingüe)",
   ],
   SCRText2: ["Abnormal's first proyect!", "El primer proyecto de Abnormal!"],
-  // RSAText: [
-  //   "With servers in virtually every country, the Rudolf Steiner Archive & e.Lib is truly a World-wide presence for the Anthroposophical Movement. Whether you're a seasoned follower of the philosophy of Rudolf Steiner or someone coming here for the first time, this site will challange your thinking and allow you to experience the world from a different point of view ... it's the same ... only different!",
-  //   "Con servidores en casi todos los paises, el Rudolf Steriner Archive es una verdadera precesencia del movimiento atroposofico en la red.",
-  // ],
+  RSAText: [
+    "Anthroposophical Publications and Rudolf Steiner Publications are imprints of The e.Lib, Inc. Our books are offered at reasonable prices made possible by print-on-demand technology.",
+    `"Anthroposophical Publications" y "Rudolf Steiner Publications" son marcas de "The e.Lib, Inc". Nuestros libros se ofrecen a precios razonables gracias al modelo de producciń por encargo "print on demand".`,
+  ],
   aboutText: [
-    "Abnormal Design is a small web-dev project based in Cordoba, Argentina. Founded by me (the guy who's face you see below), the main designer and developer, though helped by many along the way.",
-    "Abnormal Design es una pequeña empresa de desarollo web de Córdoba, Argentina. Cuenta hasta ahora con una persona, pues el de abajo",
+    "Abnormal Design is a small web-dev project based in Cordoba, Argentina. Founded by me though helped by many along the way.",
+    "Abnormal Design es una pequeña empresa de desarollo web de Córdoba, fundada por mi con ayuda de muchos.",
   ],
   contactTitle: ["Contact Abnormal Design", "Contactate con nosotros"],
   email: ["Your e-mail address:", "Tu dirección de e-mail:"],
